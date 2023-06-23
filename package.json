@@ -1,0 +1,23 @@
+{
+  "name": "simple-search",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build --watch",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite-plugin-css-injected-by-js": "^3.1.1",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.237",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "sass": "^1.63.6",
+    "unplugin-auto-import": "^0.16.4",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.3.9"
+  }
+}
