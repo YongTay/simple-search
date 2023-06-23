@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build --watch",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "copy": "node script/copy.js"
   },
   "dependencies": {
     "vite-plugin-css-injected-by-js": "^3.1.1",
