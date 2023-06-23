@@ -20,6 +20,8 @@ chrome.action.onClicked.addListener((tab) => {
           result
         })
       })
+    } else if(msg.close) {
+      chrome.tabs.remove(msg.close.id, () => {})
     }
   })
 })

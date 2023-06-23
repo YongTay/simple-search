@@ -23,6 +23,7 @@
             :tabindex="i+1"
             @keyup.enter="onselect(item)"
             @dblclick="onselect(item)"
+            @click="onClose(item)"
           />
         </div>
     </div>
@@ -115,6 +116,15 @@ function hide(e) {
   }
 }
 
+function onClose(item) {
+  port.postMessage({
+    close: item
+  })
+  port.postMessage({
+    search: '*'
+  })
+}
+
 window.addEventListener('keydown', hide)
 onUnmounted(() => {
   window.removeEventListener('keydown', hide)
@@ -141,19 +151,6 @@ function onselect(item) {
   margin: 0;
   color: #000;
   font-size: 16px;
-  //.extension-popup {
-  //  z-index: 9999;
-  //}
-  //.el-dialog__header {
-  //  background: none;
-  //}
-  //.el-dialog__body {
-  //  padding: 0 20px 20px;
-  //}
-  //header {
-  //  background: none;
-  //  height: auto;
-  //}
   .extension-search-input {
     height: 30px!important;
     line-height: 30px!important;
